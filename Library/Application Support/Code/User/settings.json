@@ -1,0 +1,8 @@
+{
+    "workbench.colorTheme": "Quiet Light",
+    "files.trimTrailingWhitespace": true,
+    "editor.minimap.enabled": false,
+    "editor.renderWhitespace": "all",
+    "diffEditor.ignoreTrimWhitespace": true,
+    "files.autoSave": "afterDelay"
+}
