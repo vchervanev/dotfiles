@@ -1,16 +1,22 @@
 #!/bin/bash
 
-echo /usr/local/bin/fish | sudo tee -a /etc/shells
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
-chsh -s /usr/local/bin/fish
-curl -L https://get.oh-my.fish | fish
-omf install bobthefish
-set -g theme_powerline_fonts no
+# TODO 1pw login
 
-git clone https://github.com/powerline/fonts --depth=1
-cd fonts
-./install.sh
+# TODO copy dotfiles
 
-git clone --depth=1 https://github.com/amix/vimrc.git ~/.vim_runtime
-sh ~/.vim_runtime/install_awesome_vimrc.sh
+keybase login
+export GPG_TTY=$(tty)
+keybase pgp export -s | gpg --import
+gpg -d -o dotfiles.zip dotfiles.zip.gpg
 
+unzip dotfiles.zip
+
+echo /usr/local/bin/zsh | sudo tee -a /etc/shells
+chsh -s /usr/local/bin/zsh
+
+sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
+# lost .zshrc!
+echo 'eval "$(rbenv init -)"' >> ~/.zshrc
