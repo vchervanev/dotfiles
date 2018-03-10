@@ -2,6 +2,10 @@
 
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
+ln -s  ~/w/v/dotfiles/Brewfile ~/Brewfile
+cd ~
+brew bundle
+
 # TODO 1pw login
 
 # TODO copy dotfiles
@@ -20,3 +24,6 @@ sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/i
 
 # lost .zshrc!
 echo 'eval "$(rbenv init -)"' >> ~/.zshrc
+echo 'export GPG_TTY=$(tty)' >> ~/.zshrc
+
+$(brew --prefix)/opt/fzf/install
