@@ -16,6 +16,7 @@ brew "docker-machine"
 brew "exiv2"
 brew "fzf"
 # brew "geckodriver"
+brew "go"
 brew "gpgme"
 # brew "hub"
 brew "imagemagick" #, args: ["with-x11"]
