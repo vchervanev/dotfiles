@@ -25,5 +25,6 @@ sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/i
 # lost .zshrc!
 echo 'eval "$(rbenv init -)"' >> ~/.zshrc
 echo 'export GPG_TTY=$(tty)' >> ~/.zshrc
-
+echo 'alias ccd="echo $(pwd) | pbcopy"' >> ~/.zshrc
+echo 'eval $(docker-machine env default)' >> ~/.zshrc
 $(brew --prefix)/opt/fzf/install
