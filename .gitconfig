@@ -1,10 +1,7 @@
-# This is Git's per-user configuration file.
 [user]
-# Please adapt and uncomment the following lines:
 	name = Vladimir Chervanev
 	email = vchervanev.dev@gmail.com
-	signingkey = EA78561D02A9A3C8
 [core]
-	excludesfile = /Users/vlad/.gitignore_global
-[branch]
-	autosetupmerge = always
+	excludesfile = ~/.gitignore_global
+[push]
+	default = current
